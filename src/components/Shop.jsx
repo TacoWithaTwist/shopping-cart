@@ -1,11 +1,8 @@
+import { useShopContext } from './ShopContext';
 import ShopItem from './ShopItem';
 
 export default function Shop() {
-  const ItemArr = [
-    { ItemName: 'Box', ItemPrice: '1500 USDT' },
-    { ItemName: 'Shirt', ItemPrice: '300 USDT' },
-    { ItemName: 'Toy', ItemPrice: '500 USDT' },
-  ];
+  const ItemArr = useShopContext();
   return (
     <>
       <h2>Shop</h2>
