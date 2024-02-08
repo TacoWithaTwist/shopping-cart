@@ -1,4 +1,4 @@
-import { useShopContext } from './ShopContext';
+import { useShopContext } from './ShopContext.jsx';
 import ShopItem from './ShopItem';
 
 export default function Shop() {
