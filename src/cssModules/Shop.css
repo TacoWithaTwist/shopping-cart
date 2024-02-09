@@ -1,0 +1,48 @@
+/* Shop.css */
+.shop-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.Item {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 25%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.Item:hover {
+  transform: translateY(-5px);
+}
+
+.Item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.Item-details {
+  padding: 20px;
+}
+
+.Item-name {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.Item-price {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 768px) {
+  .shop-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

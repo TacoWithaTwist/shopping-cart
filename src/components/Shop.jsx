@@ -1,19 +1,23 @@
 import ShopItem from "./ShopItem.jsx";
-import { Link } from "react-router-dom";
 import { FakeStoreAPI } from "./FakeStoreAPI.jsx";
+import NavBar from "./NavBar.jsx";
+import "../cssModules/Shop.css";
 const ShopArr = await FakeStoreAPI();
 export default function Shop() {
   return (
     <>
-      <h1>Shop</h1>
-      <Link to="/">Home</Link>
-      {ShopArr.map((item, index) => (
-        <ShopItem
-          key={index}
-          ItemName={ShopArr[index].title}
-          ItemPrice={ShopArr[index].price}
-        />
-      ))}
+      <NavBar />
+      <div id="ItemContainer">
+        {ShopArr.map((item, index) => (
+          <ShopItem
+            key={index}
+            ItemName={item.title}
+            ItemPrice={item.price}
+            ItemImage={item.image}
+            className="Item"
+          />
+        ))}
+      </div>
     </>
   );
 }
