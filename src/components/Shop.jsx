@@ -1,9 +1,13 @@
 import ShopItem from "./ShopItem.jsx";
-import { FakeStoreAPI } from "./FakeStoreAPI.jsx";
 import NavBar from "./NavBar.jsx";
+import useFetchShop from "./useFetchShop.jsx";
 import "../cssModules/Shop.css";
-const ShopArr = await FakeStoreAPI();
-export default function Shop() {
+import ErrorPage from "./ErrorPage.jsx";
+export default function Shop({ Items }) {
+  const { ShopArr, error } = useFetchShop(Items);
+  if (error) {
+    return <ErrorPage />;
+  }
   return (
     <>
       <NavBar />
