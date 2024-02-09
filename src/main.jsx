@@ -6,7 +6,7 @@ import './cssModules/index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ShopContext.Provider>
+    <ShopContext.Provider value={ShopContext}>
       <Router></Router>
     </ShopContext.Provider>
   </React.StrictMode>
