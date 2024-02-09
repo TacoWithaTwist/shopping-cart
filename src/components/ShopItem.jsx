@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 function ShopItem(props) {
   return (
     <>
@@ -10,7 +10,7 @@ function ShopItem(props) {
 }
 ShopItem.propTypes = {
   ItemName: PropTypes.string.isRequired,
-  ItemPrice: PropTypes.string.isRequired,
+  ItemPrice: PropTypes.number.isRequired,
 };
 
 export default ShopItem;
