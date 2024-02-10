@@ -1,5 +1,5 @@
 /* Shop.css */
-.shop-container {
+.ItemContainer {
   max-width: 1200px;
   margin: 20px auto;
   display: grid;
@@ -7,10 +7,15 @@
   grid-gap: 20px;
 }
 
+.ItemColumn {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
 .Item {
   background-color: #fff;
   border-radius: 8px;
-  width: 25%;
+  width: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -25,24 +30,9 @@
   height: auto;
   border-bottom: 1px solid #ddd;
 }
-
-.Item-details {
-  padding: 20px;
-}
-
-.Item-name {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
-
-.Item-price {
-  font-size: 1rem;
-  color: #666;
-}
-
 /* Adjustments for mobile devices */
 @media (max-width: 768px) {
-  .shop-container {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  .ItemContainer {
+    grid-template-columns: 1fr; /* Change grid to single column on mobile */
   }
 }

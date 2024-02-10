@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar.jsx";
-import Shop from "./Shop.jsx";
 import "../cssModules/Home.css";
+import ShopItem from "./ShopItem.jsx";
 import useFetchShop from "./useFetchShop.jsx";
 export default function Home() {
-  const { featuredArr, error } = useFetchShop(
+  const { ShopArr, error } = useFetchShop(
     "https://fakestoreapi.com/products/category/jewelery"
   );
-  console.log(featuredArr);
   if (error) {
     return <div>Error: {error.message}</div>;
   }
@@ -24,7 +23,15 @@ export default function Home() {
       <div className="featured-products">
         <h2>Featured Products</h2>
         <div className="product-grid">
-          <Shop Items={featuredArr} />
+          {ShopArr.map((item, index) => (
+            <ShopItem
+              key={index}
+              ItemName={item.title}
+              ItemPrice={item.price}
+              ItemImage={item.image}
+              className="Item"
+            />
+          ))}
         </div>
       </div>
       {/* Other sections (e.g., special offers, about us, etc.) can be added here */}
