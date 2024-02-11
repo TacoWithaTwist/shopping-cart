@@ -1,16 +1,7 @@
 import PropTypes from "prop-types";
 import "../cssModules/Item.css";
 import AddToCartButton from "./AddToCartButton";
-import { useContext } from "react";
 function ShopItem(props) {
-  const { addToCart } = useContext(ShopContext);
-  const handleAddToCart = () => {
-    addToCart({
-      ItemName: props.ItemName,
-      ItemPrice: props.ItemPrice,
-      ItemImage: props.ItemImage,
-    });
-  };
   return (
     <div className={props.className}>
       <img src={props.ItemImage} alt="" />

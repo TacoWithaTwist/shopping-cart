@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { FakeStoreAPI } from "./FakeStoreAPI";
-
 export default function useFetchShop(Items) {
   const [ShopArr, setShopArr] = useState([]);
   const [error, setError] = useState(null);

@@ -1,7 +1,7 @@
 import NavBar from "./NavBar.jsx";
 import useFetchShop from "./useFetchShop.jsx";
 import "../cssModules/Shop.css";
-const ShopArr = await FakeStoreAPI();
+const ShopArr = await useFetchShop();
 export default function Shop() {
   return (
     <>

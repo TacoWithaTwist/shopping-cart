@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import { ShopContext } from "./ShopContext.jsx";
 import NavBar from "./NavBar.jsx";
 const Cart = () => {
