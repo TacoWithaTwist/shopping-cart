@@ -8,7 +8,7 @@ function ShopItem(props) {
       <h3>{props.ItemName}</h3>
       <span>{props.ItemPrice}</span>
       <br />
-      <AddToCartButton onClick={handleAddToCart()} />
+      <AddToCartButton />
     </div>
   );
 }

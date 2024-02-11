@@ -3,7 +3,6 @@ import { FakeStoreAPI } from "./FakeStoreAPI";
 export default function useFetchShop(Items) {
   const [ShopArr, setShopArr] = useState([]);
   const [error, setError] = useState(null);
-
   useEffect(() => {
     const fetchShopItems = async () => {
       try {
