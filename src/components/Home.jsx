@@ -22,7 +22,7 @@ export default function Home() {
       </div>
       <div className="featured-products">
         <h2>Featured Products</h2>
-        <div className="product-grid">
+        <div className="ItemContainer">
           {ShopArr.map((item, index) => (
             <ShopItem
               key={index}
